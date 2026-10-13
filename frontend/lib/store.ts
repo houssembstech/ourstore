@@ -3,13 +3,13 @@ import { persist } from 'zustand/middleware';
 
 export interface CartItem {
   product: string;
-  name: { fr: string; ar: string; en: string };
+  name: Record<string, string>;
   image: string;
   price: number;
   comparePrice?: number;
   stock: number;
   quantity: number;
-  category?: { name: { fr: string; ar: string; en: string }; slug: string };
+  category?: { name: Record<string, string>; slug: string };
 }
 
 interface User {

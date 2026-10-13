@@ -8,14 +8,14 @@ import { usersApi } from '@/lib/api';
 
 interface Product {
   _id: string;
-  name: { fr: string; ar: string; en: string };
+  name: Record<string, string>;
   price: number;
   comparePrice?: number;
   images: string[];
   rating: number;
   numReviews: number;
   stock: number;
-  category?: { name: { fr: string; ar: string; en: string }; slug: string };
+  category?: { name: Record<string, string>; slug: string };
 }
 
 export default function ProductCard({ product }: { product: Product }) {
@@ -127,7 +127,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
       </article>
 
-      <style jsx>{`
+      <style>{`
         .product-card-link { text-decoration: none; color: inherit; display: block; }
         .product-card {
           background: var(--surface);
