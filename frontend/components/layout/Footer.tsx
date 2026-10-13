@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useLocale, useTranslations } from 'next-intl';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin } from 'lucide-react';
+import { Share2, Heart, X, Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -17,9 +17,9 @@ export default function Footer() {
           <Link href={`/${locale}`} className="footer-logo">OUR<span>STORE</span></Link>
           <p className="footer-tagline">{t('tagline')}</p>
           <div className="social-links">
-            <a href="#" aria-label="Facebook" className="social-btn"><Facebook size={18} /></a>
-            <a href="#" aria-label="Instagram" className="social-btn"><Instagram size={18} /></a>
-            <a href="#" aria-label="Twitter" className="social-btn"><Twitter size={18} /></a>
+            <a href="#" aria-label="Facebook" className="social-btn"><Share2 size={18} /></a>
+            <a href="#" aria-label="Instagram" className="social-btn"><Heart size={18} /></a>
+            <a href="#" aria-label="Twitter" className="social-btn"><X size={18} /></a>
           </div>
         </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .footer {
           background: var(--text-primary);
           color: #d1d5db;
