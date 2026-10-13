@@ -110,7 +110,7 @@ export default function CheckoutPage() {
           </div>
         </div>
         <Footer />
-        <style jsx>{`
+        <style>{`
           .success-page { display: flex; align-items: center; justify-content: center; min-height: 70vh; padding: 2rem 1rem; }
           .success-card { background: white; border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; max-width: 480px; width: 100%; border: 1px solid var(--border); box-shadow: var(--shadow); animation: scaleIn 0.3s ease; }
           .success-icon { color: var(--success); margin-bottom: 1.5rem; }
@@ -236,7 +236,7 @@ export default function CheckoutPage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .checkout-layout {
           display: grid;
           grid-template-columns: 1fr;

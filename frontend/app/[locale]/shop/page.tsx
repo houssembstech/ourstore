@@ -246,7 +246,7 @@ export default function ShopPage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .shop-layout {
           display: flex;
           gap: 0;

@@ -93,7 +93,7 @@ export default function ContactPage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .contact-hero { background: linear-gradient(135deg, var(--text-primary) 0%, #374151 100%); padding: 4rem 1rem; }
         .contact-hero-inner { text-align: center; color: white; }
         .contact-hero-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 0.75rem; }

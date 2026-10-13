@@ -581,7 +581,7 @@ export default function AdminPage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .admin-layout { display: flex; min-height: calc(100vh - 64px); }
         .admin-sidebar { width: 220px; flex-shrink: 0; background: white; border-right: 1px solid var(--border); padding: 1.5rem 0; display: none; }
         @media (min-width: 768px) { .admin-sidebar { display: block; } }

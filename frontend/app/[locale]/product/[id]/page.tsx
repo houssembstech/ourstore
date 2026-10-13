@@ -327,7 +327,7 @@ export default function ProductPage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .back-link {
           display: inline-flex;
           align-items: center;

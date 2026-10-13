@@ -218,7 +218,7 @@ export default function Navbar() {
         )}
       </header>
 
-      <style jsx>{`
+      <style>{`
         .navbar {
           position: sticky;
           top: 0;

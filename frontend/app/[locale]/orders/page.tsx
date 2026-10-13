@@ -114,7 +114,7 @@ export default function OrdersPage() {
       </div>
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         .orders-page { padding: 2rem 1rem; max-width: 800px; margin: 0 auto; }
         .page-title { display: flex; align-items: center; gap: 0.75rem; font-size: 1.75rem; font-weight: 800; margin-bottom: 2rem; }
         .orders-list { display: flex; flex-direction: column; gap: 1rem; }

@@ -212,7 +212,7 @@ export default function HomePage() {
 
       <Footer />
 
-      <style jsx>{`
+      <style>{`
         /* Hero */
         .hero {
           position: relative;

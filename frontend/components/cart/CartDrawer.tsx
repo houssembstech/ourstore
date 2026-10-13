@@ -132,7 +132,7 @@ export default function CartDrawer() {
         )}
       </div>
 
-      <style jsx>{`
+      <style>{`
         .drawer-header {
           display: flex;
           align-items: center;
