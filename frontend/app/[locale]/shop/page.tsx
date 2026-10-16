@@ -246,74 +246,7 @@ export default function ShopPage() {
 
       <Footer />
 
-      <style>{`
-        .shop-layout {
-          display: flex;
-          gap: 0;
-          min-height: 80vh;
-          max-width: 1280px;
-          margin: 0 auto;
-          padding: 1.5rem 1rem;
-          gap: 1.5rem;
-        }
-        .shop-sidebar {
-          width: 260px;
-          flex-shrink: 0;
-          display: none;
-        }
-        @media (min-width: 1024px) { .shop-sidebar { display: block; } }
-        .shop-sidebar.open {
-          display: block;
-          position: fixed;
-          top: 0;
-          left: 0;
-          height: 100vh;
-          z-index: 50;
-          background: white;
-          overflow-y: auto;
-          padding: 1rem;
-          width: 280px;
-          box-shadow: var(--shadow-lg);
-          animation: slideInRight 0.3s ease;
-        }
-        [dir='rtl'] .shop-sidebar.open { left: auto; right: 0; }
-        .sidebar-overlay { z-index: 49; }
-        .sidebar-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-        .sidebar-title { font-size: 1.1rem; font-weight: 700; }
-        .sidebar-close { display: flex; }
-        @media (min-width: 1024px) { .sidebar-close { display: none; } }
-        .filter-group { margin-bottom: 1.5rem; }
-        .filter-group-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.75rem; }
-        .filter-option {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          width: 100%;
-          padding: 0.5rem 0.75rem;
-          border-radius: var(--radius);
-          border: none;
-          background: none;
-          font-size: 0.875rem;
-          color: var(--text-secondary);
-          cursor: pointer;
-          text-align: start;
-          transition: var(--transition);
-          font-family: inherit;
-        }
-        .filter-option:hover { background: var(--surface-2); color: var(--text-primary); }
-        .filter-option.active { background: var(--primary-light); color: var(--primary-dark); font-weight: 600; }
-        .price-inputs { display: flex; flex-direction: column; gap: 0.5rem; }
-        .clear-btn { width: 100%; }
-        .shop-main { flex: 1; min-width: 0; }
-        .shop-toolbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; gap: 1rem; }
-        .toolbar-left { display: flex; align-items: center; gap: 0.75rem; }
-        .filter-toggle { display: flex; }
-        @media (min-width: 1024px) { .filter-toggle { display: none; } }
-        .results-count { font-size: 0.875rem; color: var(--text-secondary); }
-        .sort-select { max-width: 200px; padding: 0.45rem 0.875rem; }
-        .search-bar-shop { margin-bottom: 1.25rem; }
-        .pagination { display: flex; align-items: center; justify-content: center; gap: 0.375rem; margin-top: 2rem; flex-wrap: wrap; }
-      `}</style>
+      
     </>
   );
 }

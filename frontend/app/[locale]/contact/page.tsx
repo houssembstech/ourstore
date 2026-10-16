@@ -93,26 +93,7 @@ export default function ContactPage() {
 
       <Footer />
 
-      <style>{`
-        .contact-hero { background: linear-gradient(135deg, var(--text-primary) 0%, #374151 100%); padding: 4rem 1rem; }
-        .contact-hero-inner { text-align: center; color: white; }
-        .contact-hero-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 0.75rem; }
-        .contact-hero-subtitle { font-size: 1.1rem; opacity: 0.8; }
-        .contact-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; padding: 2.5rem 1rem; max-width: 1100px; margin: 0 auto; }
-        @media (min-width: 768px) { .contact-layout { grid-template-columns: 1fr 1.5fr; } }
-        .contact-info { display: flex; flex-direction: column; gap: 1rem; }
-        .contact-card { display: flex; align-items: flex-start; gap: 1rem; padding: 1.25rem; text-decoration: none; color: inherit; transition: var(--transition); }
-        .contact-card:hover { border-color: var(--primary); }
-        .contact-card-icon { width: 46px; height: 46px; background: var(--primary-light); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--primary-dark); flex-shrink: 0; }
-        .contact-card-label { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-secondary); margin-bottom: 0.25rem; }
-        .contact-card-value { font-weight: 600; font-size: 0.95rem; }
-        .contact-form-card { padding: 2rem; }
-        .form-heading { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
-        .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-        .sent-state { display: flex; flex-direction: column; align-items: center; gap: 1rem; padding: 2rem; text-align: center; }
-        .sent-state h2 { font-size: 1.5rem; font-weight: 800; }
-        .sent-state p { color: var(--text-secondary); }
-      `}</style>
+      
     </>
   );
 }

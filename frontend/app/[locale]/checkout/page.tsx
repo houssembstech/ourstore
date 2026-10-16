@@ -110,15 +110,7 @@ export default function CheckoutPage() {
           </div>
         </div>
         <Footer />
-        <style>{`
-          .success-page { display: flex; align-items: center; justify-content: center; min-height: 70vh; padding: 2rem 1rem; }
-          .success-card { background: white; border-radius: var(--radius-lg); padding: 3rem 2rem; text-align: center; max-width: 480px; width: 100%; border: 1px solid var(--border); box-shadow: var(--shadow); animation: scaleIn 0.3s ease; }
-          .success-icon { color: var(--success); margin-bottom: 1.5rem; }
-          .success-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.75rem; }
-          .success-desc { color: var(--text-secondary); margin-bottom: 1.5rem; }
-          .success-order-number { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-light); color: var(--primary-dark); padding: 0.5rem 1rem; border-radius: var(--radius-full); font-size: 0.9rem; margin-bottom: 2rem; }
-          .success-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-        `}</style>
+        
       </>
     );
   }
@@ -236,39 +228,7 @@ export default function CheckoutPage() {
 
       <Footer />
 
-      <style>{`
-        .checkout-layout {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 2rem 1rem;
-        }
-        @media (min-width: 768px) { .checkout-layout { grid-template-columns: 1.4fr 1fr; } }
-        .checkout-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
-        .form-section-title { font-size: 1rem; font-weight: 700; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border); }
-        .checkout-form { background: white; border-radius: var(--radius-lg); padding: 2rem; border: 1px solid var(--border); display: flex; flex-direction: column; gap: 1rem; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        @media (max-width: 500px) { .form-grid { grid-template-columns: 1fr; } }
-        .form-error { font-size: 0.78rem; color: var(--error); margin-top: 2px; }
-        .submit-btn { width: 100%; margin-top: 0.5rem; }
-        .order-summary-card { background: white; border-radius: var(--radius-lg); padding: 1.5rem; border: 1px solid var(--border); position: sticky; top: 80px; }
-        .summary-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
-        .summary-items { display: flex; flex-direction: column; gap: 0.875rem; max-height: 300px; overflow-y: auto; }
-        .summary-item { display: flex; align-items: center; gap: 0.75rem; }
-        .summary-item-img { width: 52px; height: 52px; object-fit: cover; border-radius: var(--radius-sm); border: 1px solid var(--border); flex-shrink: 0; }
-        .summary-item-info { flex: 1; min-width: 0; }
-        .summary-item-name { font-size: 0.85rem; font-weight: 500; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-        .summary-item-qty { font-size: 0.8rem; color: var(--text-secondary); }
-        .summary-item-price { font-size: 0.875rem; font-weight: 700; flex-shrink: 0; }
-        .summary-rows { display: flex; flex-direction: column; gap: 0.625rem; }
-        .summary-row { display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-secondary); }
-        .free-text { color: var(--success); font-weight: 600; font-size: 0.85rem; }
-        .total-row { font-weight: 800; font-size: 1.1rem; color: var(--text-primary); }
-        .total-amount { color: var(--primary); }
-        .order-note { margin-top: 1rem; padding: 0.875rem; background: var(--primary-light); border-radius: var(--radius); font-size: 0.825rem; color: #92400e; line-height: 1.5; }
-      `}</style>
+      
     </>
   );
 }

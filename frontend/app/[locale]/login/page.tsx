@@ -76,22 +76,7 @@ export default function LoginPage() {
       </div>
       <Footer />
 
-      <style>{`
-        .auth-page { display: flex; align-items: center; justify-content: center; min-height: 70vh; padding: 2rem 1rem; background: var(--background); }
-        .auth-card { background: white; border-radius: var(--radius-lg); padding: 2.5rem 2rem; width: 100%; max-width: 420px; border: 1px solid var(--border); box-shadow: var(--shadow); animation: scaleIn 0.3s ease; }
-        .auth-logo { font-size: 1.5rem; font-weight: 900; text-align: center; margin-bottom: 1.5rem; color: var(--text-primary); }
-        .auth-logo span { color: var(--primary); }
-        .auth-title { font-size: 1.5rem; font-weight: 800; text-align: center; margin-bottom: 1.5rem; }
-        .auth-error { background: #fee2e2; color: #991b1b; padding: 0.75rem 1rem; border-radius: var(--radius); font-size: 0.875rem; margin-bottom: 1rem; }
-        .auth-form { display: flex; flex-direction: column; gap: 1rem; }
-        .pwd-wrapper { position: relative; }
-        .pwd-wrapper .form-input { padding-inline-end: 2.75rem; }
-        .pwd-toggle { position: absolute; right: 0.75rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--text-muted); }
-        [dir='rtl'] .pwd-toggle { right: auto; left: 0.75rem; }
-        .auth-switch { text-align: center; margin-top: 1.5rem; font-size: 0.875rem; color: var(--text-secondary); }
-        .auth-link { color: var(--primary); font-weight: 600; text-decoration: none; }
-        .auth-link:hover { text-decoration: underline; }
-      `}</style>
+      
     </>
   );
 }

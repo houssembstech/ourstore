@@ -581,70 +581,7 @@ export default function AdminPage() {
 
       <Footer />
 
-      <style>{`
-        .admin-layout { display: flex; min-height: calc(100vh - 64px); }
-        .admin-sidebar { width: 220px; flex-shrink: 0; background: white; border-right: 1px solid var(--border); padding: 1.5rem 0; display: none; }
-        @media (min-width: 768px) { .admin-sidebar { display: block; } }
-        .admin-sidebar-header { padding: 0 1rem 1rem; border-bottom: 1px solid var(--border); margin-bottom: 0.75rem; }
-        .admin-badge { background: var(--primary); color: white; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); text-transform: uppercase; }
-        .admin-nav { display: flex; flex-direction: column; gap: 0.25rem; padding: 0 0.75rem; }
-        .admin-nav-item {
-          display: flex; align-items: center; gap: 0.75rem; padding: 0.625rem 0.875rem;
-          border-radius: var(--radius); border: none; background: none; font-size: 0.9rem;
-          color: var(--text-secondary); cursor: pointer; font-family: inherit; text-align: start;
-          transition: var(--transition); width: 100%;
-        }
-        .admin-nav-item:hover { background: var(--surface-2); color: var(--text-primary); }
-        .admin-nav-item.active { background: var(--primary-light); color: var(--primary-dark); font-weight: 600; }
-        .admin-main { flex: 1; padding: 1.5rem; overflow: auto; background: var(--background); }
-        .admin-page-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; }
-        .admin-page-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
-        .admin-page-header .admin-page-title { margin-bottom: 0; }
-        .admin-toolbar { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
-        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-        @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-        .stat-card { padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
-        .stat-icon { width: 48px; height: 48px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; }
-        .stat-value { font-size: 1.75rem; font-weight: 900; color: var(--text-primary); }
-        .stat-label { font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; }
-        .admin-table-wrapper { background: white; border-radius: var(--radius-lg); border: 1px solid var(--border); overflow: auto; }
-        .admin-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
-        .admin-table th { background: var(--surface-2); padding: 0.875rem 1rem; text-align: start; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-secondary); border-bottom: 1px solid var(--border); white-space: nowrap; }
-        .admin-table td { padding: 0.875rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
-        .admin-table tr:last-child td { border-bottom: none; }
-        .admin-table tr:hover td { background: var(--surface-2); }
-        /* Modal */
-        .modal {
-          position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-          background: white; border-radius: var(--radius-lg); z-index: 60;
-          width: min(700px, 95vw); max-height: 90vh; display: flex; flex-direction: column;
-          box-shadow: var(--shadow-lg);
-        }
-        .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--border); flex-shrink: 0; }
-        .modal-header h2 { font-size: 1.1rem; font-weight: 700; }
-        .modal-body { padding: 1.5rem; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
-        .modal-footer { display: flex; justify-content: flex-end; gap: 0.75rem; padding: 1.25rem 1.5rem; border-top: 1px solid var(--border); flex-shrink: 0; }
-        .modal-section-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
-        .modal-section { display: flex; flex-direction: column; gap: 1rem; }
-        .form-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.875rem; }
-        .form-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.875rem; }
-        @media (max-width: 500px) { .form-grid-3, .form-grid-2 { grid-template-columns: 1fr; } }
-        .checkbox-label { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; cursor: pointer; }
-        .upload-zone {
-          border: 2px dashed var(--border); border-radius: var(--radius-lg);
-          padding: 2rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-          cursor: pointer; transition: var(--transition); color: var(--text-secondary); text-align: center;
-        }
-        .upload-zone:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
-        .image-preview-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-        .image-preview-item { position: relative; width: 80px; height: 80px; }
-        .image-preview-item img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-sm); }
-        .img-remove-btn {
-          position: absolute; top: -6px; right: -6px; background: var(--error); color: white;
-          border: none; border-radius: 50%; width: 20px; height: 20px;
-          display: flex; align-items: center; justify-content: center; cursor: pointer;
-        }
-      `}</style>
+      
     </>
   );
 }
