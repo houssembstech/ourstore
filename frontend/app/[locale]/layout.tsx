@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   title: { default: 'Our Store', template: '%s | Our Store' },
   description: 'Votre boutique en ligne — des milliers de produits de qualité',
   manifest: '/manifest.json',
-  themeColor: '#f59e0b',
   icons: { apple: '/icons/icon-192.png' },
   openGraph: {
     type: 'website',
@@ -25,7 +24,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const messages = await getMessages();
+  const messages = await getMessages({ locale });
   const isRtl = locale === 'ar';
 
   return (
@@ -39,7 +38,7 @@ export default async function LocaleLayout({
         />
       </head>
       <body>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
       </body>
