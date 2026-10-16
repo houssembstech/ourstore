@@ -1,15 +1,7 @@
-import type { Metadata } from 'next';
+// Root layout — the [locale] layout handles html/body/lang/dir
+// This pattern is required for next-intl App Router i18n
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Our Store',
-  description: 'Votre boutique en ligne',
-};
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html>
-      <body>{children}</body>
-    </html>
-  );
+  return children as React.ReactElement;
 }

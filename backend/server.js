@@ -21,6 +21,7 @@ app.use(morgan('dev'));
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL || 'http://localhost:3000',
+    'https://ourstore-omega.vercel.app',
     'http://localhost:3000',
     'http://localhost:3001',
   ],
